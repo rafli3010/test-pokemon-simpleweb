@@ -83,7 +83,7 @@ const PokemonDetail = () => {
     if (!pokemonData) return null;
 
     const imageSource =
-      `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${pokemonData.id}.gif` ||
+      pokemonData.sprites.other.showdown.front_default ||
       pokemonData.sprites.front_default ||
       pokemonData.sprites.front_shiny ||
       `https://via.placeholder.com/150`;
